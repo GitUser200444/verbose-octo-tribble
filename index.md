@@ -12,6 +12,8 @@ title: GitHub Portfolio
         <h1>Teymarr P. (He/Him)</h1>
         <p>@gituser200444</p>
         <p><span class="badge">Developer Program Member</span></p>
+        <p><span class="badge">IEEE Program Member</span></p>
+        <p><span class="badge">Association for Computing Machinery</span></p>
         <p>Location: Greater Pittsburgh Region, United States</p>
         <p>Email: teymarrpage@tuta.io</p>
         <p><a href="https://www.linkedin.com/in/teymarrpage/" target="_blank">LinkedIn</a></p>
