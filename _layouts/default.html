@@ -13,6 +13,13 @@
 <link rel="stylesheet" href="style.css">
 <script src="config.js"></script>
         
+        body {
+            margin: 0;
+            padding: 0;
+            background: #111827;
+            font-family: 'Press Start 2P', cursive;
+        }
+
         .loading-screen {
             position: fixed;
             top: 0;
@@ -25,28 +32,65 @@
             align-items: center;
             justify-content: center;
             color: #ec4899;
-            font-family: 'Press Start 2P', cursive;
             z-index: 1000;
             animation: fadeOut 0.5s ease-in-out 5s forwards;
         }
 
-        .loading-text {
+        .loading-container {
+            text-align: center;
+            background: #1f2937;
+            padding: 2rem;
+            border: 4px solid #ec4899;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
+        }
+
+        .loading-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #ec4899;
+            text-shadow: 2px 2px #111827;
+        }
+
+        .loading-bar-container {
+            width: 300px;
+            height: 30px;
+            background: #111827;
+            border: 3px solid #ec4899;
+            padding: 3px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .loading-bar {
+            width: 0%;
+            height: 100%;
+            background: #ec4899;
+            animation: load 5s linear forwards;
+        }
+
+        .press-start {
             margin-top: 20px;
+            font-size: 14px;
+            color: #ec4899;
             animation: blink 1s infinite;
         }
 
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 5px solid #ec4899;
-            border-top: 5px solid transparent;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
+        .pixel-corner {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #ec4899;
         }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .top-left { top: -5px; left: -5px; }
+        .top-right { top: -5px; right: -5px; }
+        .bottom-left { bottom: -5px; left: -5px; }
+        .bottom-right { bottom: -5px; right: -5px; }
+
+        @keyframes load {
+            0% { width: 0%; }
+            100% { width: 100%; }
         }
 
         @keyframes blink {
@@ -55,8 +99,14 @@
         }
 
         @keyframes fadeOut {
-            from { opacity: 1; }
+            from { opacity: 1; visibility: visible; }
             to { opacity: 0; visibility: hidden; }
+        }
+
+        .loading-status {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #ec4899;
         }
 
         .resume-container {
@@ -69,89 +119,55 @@
             to { opacity: 1; }
         }
 
-        /* Add your custom styles here */
+        /* Rest of your existing styles... */
     </style>
 </head>
-<body class="bg-gray-900">
+<body>
     <!-- Loading Screen -->
     <div class="loading-screen">
-        <div class="spinner"></div>
-        <div class="loading-text">LOADING...</div>
-        <div class="mt-4 text-sm">Press START to continue</div>
-    </div>
-
-    <!-- Resume Content -->
-    <div class="resume-container">
-        <div class="flex h-screen p-4 gap-4">
-            <!-- Left Screen -->
-            <div class="w-1/2 bg-gray-800 rounded-lg p-4 border-2 border-pink-400 overflow-y-auto">
-                <!-- Profile Section -->
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-24 h-24 bg-gray-700 rounded-full border-2 border-pink-400">
-                        <!-- Replace src with your profile picture -->
-                        <img src="/api/placeholder/96/96" alt="Profile" class="rounded-full">
-                    </div>
-                    <div>
-                        <h1 class="text-xl font-bold text-pink-400">Your Name</h1>
-                        <p class="text-sm text-pink-300">your/pronouns</p>
-                    </div>
-                </div>
-
-                <!-- Education Section -->
-                <div class="mb-6">
-                    <h2 class="text-lg font-bold mb-3 text-pink-400">Education</h2>
-                    <div class="bg-gray-700 p-3 rounded mb-3">
-                        <h3 class="font-bold text-pink-400">Master of Science</h3>
-                        <p class="text-sm text-pink-300">University Name</p>
-                        <p class="text-sm text-pink-300">2022-2024</p>
-                    </div>
-                    <div class="bg-gray-700 p-3 rounded">
-                        <h3 class="font-bold text-pink-400">Bachelor of Science</h3>
-                        <p class="text-sm text-pink-300">University Name</p>
-                        <p class="text-sm text-pink-300">2018-2022</p>
-                    </div>
-                </div>
-
-                <!-- Certifications Section -->
-                <div class="mb-6">
-                    <h2 class="text-lg font-bold mb-3 text-pink-400">Certifications</h2>
-                    <div class="bg-gray-700 p-3 rounded">
-                        <ul class="text-pink-300">
-                            <li class="mb-2">CompTIA A+</li>
-                            <li class="mb-2">CompTIA Security+</li>
-                            <li>Other certifications...</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Skills Section -->
-                <div class="mb-6">
-                    <h2 class="text-lg font-bold mb-3 text-pink-400">Skills</h2>
-                    <div class="bg-gray-700 p-3 rounded mb-3">
-                        <h3 class="font-bold text-pink-400 mb-2">Cybersecurity Skills</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-gray-600 px-2 py-1 rounded text-sm text-pink-300">Penetration Testing</span>
-                            <span class="bg-gray-600 px-2 py-1 rounded text-sm text-pink-300">Network Security</span>
-                        </div>
-                    </div>
-                    <!-- Add more skill sections as needed -->
-                </div>
+        <div class="loading-container">
+            <div class="pixel-corner top-left"></div>
+            <div class="pixel-corner top-right"></div>
+            <div class="pixel-corner bottom-left"></div>
+            <div class="pixel-corner bottom-right"></div>
+            
+            <div class="loading-title">LOADING RESUME</div>
+            
+            <div class="loading-bar-container">
+                <div class="loading-bar"></div>
             </div>
-
-            <!-- Right Screen -->
-            <div class="w-1/2 bg-gray-800 rounded-lg p-4 border-2 border-pink-400 overflow-y-auto">
-                <h2 class="text-lg font-bold mb-4 text-pink-400">GitHub Projects</h2>
-                <!-- Project cards -->
-                <div class="grid gap-4">
-                    <div class="bg-gray-700 p-4 rounded cursor-pointer hover:bg-gray-600">
-                        <h3 class="font-bold text-pink-400">Project 1</h3>
-                        <p class="text-sm text-pink-300">Project description...</p>
-                    </div>
-                    <!-- Add more project cards as needed -->
-                </div>
-            </div>
+            
+            <div class="loading-status" id="loadingStatus">INITIALIZING...</div>
+            <div class="press-start">PRESS START TO CONTINUE</div>
         </div>
     </div>
+
+    <!-- Rest of your existing resume content... -->
+    <div class="resume-container">
+        <!-- Your existing resume content here -->
+    </div>
+
+    <script>
+        // Add loading status messages
+        const statusMessages = [
+            "INITIALIZING...",
+            "LOADING SKILLS...",
+            "LOADING PROJECTS...",
+            "LOADING ACHIEVEMENTS...",
+            "ALMOST READY..."
+        ];
+
+        let currentMessage = 0;
+        const statusElement = document.getElementById('loadingStatus');
+
+        const updateStatus = setInterval(() => {
+            if (currentMessage < statusMessages.length) {
+                statusElement.textContent = statusMessages[currentMessage];
+                currentMessage++;
+            } else {
+                clearInterval(updateStatus);
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
-
