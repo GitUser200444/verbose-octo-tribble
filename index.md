@@ -51,9 +51,9 @@ This program is preparing me to drive AI innovation and intelligent automation i
 
 ## **Certifications**
 
-*ArcX Cyber Threat Intelligence 101 ![CTI101](https://github.com/user-attachments/assets/ee9f333f-5e93-483e-a0bb-6d468a53971a)
-*
+*ArcX Cyber Threat Intelligence 101* ![CTI101](https://github.com/user-attachments/assets/ee9f333f-5e93-483e-a0bb-6d468a53971a)
 
+<a href="https://arcx.io/verify-certificate?id=f03f3241a006aadc4af7b8238c5b0e5ee2b18313&k=0bd39ef9273d414fb792e79bba2853e2">Verify</a>
 
 *Foundational training in Cyber Threat Intelligence (CTI) completed, covering threat actors, attack surfaces, the intelligence cycle, and legal/ethical considerations*.
 
