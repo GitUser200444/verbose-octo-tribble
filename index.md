@@ -63,7 +63,7 @@ This program is preparing me to drive AI innovation and intelligent automation i
 
 -----------------------------------
 
-*CompTIA Cloud Essentials+*
+*CompTIA Cloud Essentials+ ![Cloud_Essentials__Certified_Logo_color_15MAY19](https://github.com/user-attachments/assets/78d4451b-8756-4efa-872d-ab3583eb3ec8)
 
 *Solid foundation in cloud computing principles, including business impact, risk management, and security. Hands-on knowledge in cloud concepts, architecture, security, compliance, and governance*.
 
@@ -73,7 +73,7 @@ This program is preparing me to drive AI innovation and intelligent automation i
 
 ------------------------------------
 
-*CompTIA A+*
+*CompTIA A+ ![CompTIA_A_2Bce](https://github.com/user-attachments/assets/d2e92c21-68e3-4c11-b991-95ff1963d364)
 
 *This provided hands-on expertise in IT support, hardware, software, and troubleshooting. Key skills include hardware and software troubleshooting, operating systems and virtualization, networking and security, and cloud and IoT technologies*.
 
