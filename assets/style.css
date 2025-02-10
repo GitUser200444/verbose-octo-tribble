@@ -1,3 +1,5 @@
+body {background-color: rgb(80, 160, 255);}
+
 body {
     font-family: 'Fira Code', monospace;
     max-width: 800px;
@@ -10,7 +12,7 @@ header {
 }
 
 .badge, .coder {
-    background: #c8c8c8;
+    background: #ffffff;
     padding: 4px 10px;
     border-radius: 10px;
 }
@@ -31,7 +33,7 @@ header {
 }
 
 .project, .interest {
-    background: #f4f4f4;
+    background: #ffffff;
     padding: 15px;
     border-radius: 10px;
 }
