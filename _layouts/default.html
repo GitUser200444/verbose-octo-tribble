@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-    
+        
 <link rel="stylesheet" href="style.css">
 <script src="config.js"></script>
         
@@ -18,8 +18,10 @@
             padding: 0;
             background: #111827;
             font-family: 'Press Start 2P', cursive;
+            min-height: 100vh;
         }
 
+        /* Loading Screen Styles */
         .loading-screen {
             position: fixed;
             top: 0;
@@ -45,57 +47,79 @@
             box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
         }
 
-        .loading-title {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #ec4899;
-            text-shadow: 2px 2px #111827;
-        }
+        /* ... (previous loading screen styles remain the same) ... */
 
-        .loading-bar-container {
-            width: 300px;
-            height: 30px;
+        /* Resume Styles */
+        .resume-container {
+            opacity: 0;
+            min-height: 100vh;
+            animation: fadeIn 1s ease-in-out 5s forwards;
             background: #111827;
+            padding: 20px;
+        }
+
+        .resume-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 20px;
+        }
+
+        .screen {
+            flex: 1;
+            background: #1f2937;
             border: 3px solid #ec4899;
-            padding: 3px;
-            margin: 20px auto;
-            position: relative;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(236, 72, 153, 0.2);
+            overflow-y: auto;
+            max-height: 90vh;
         }
 
-        .loading-bar {
-            width: 0%;
-            height: 100%;
-            background: #ec4899;
-            animation: load 5s linear forwards;
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border: 3px solid #ec4899;
+            border-radius: 50%;
+            margin-bottom: 20px;
         }
 
-        .press-start {
-            margin-top: 20px;
-            font-size: 14px;
+        .section-title {
             color: #ec4899;
-            animation: blink 1s infinite;
+            font-size: 18px;
+            margin: 20px 0 10px 0;
+            border-bottom: 2px solid #ec4899;
+            padding-bottom: 5px;
         }
 
-        .pixel-corner {
-            position: absolute;
-            width: 10px;
-            height: 10px;
+        .content-card {
+            background: #374151;
+            border: 2px solid #ec4899;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+        }
+
+        .content-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(236, 72, 153, 0.2);
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: #4b5563;
+            color: #ec4899;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 4px;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
             background: #ec4899;
-        }
-
-        .top-left { top: -5px; left: -5px; }
-        .top-right { top: -5px; right: -5px; }
-        .bottom-left { bottom: -5px; left: -5px; }
-        .bottom-right { bottom: -5px; right: -5px; }
-
-        @keyframes load {
-            0% { width: 0%; }
-            100% { width: 100%; }
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
+            color: white;
         }
 
         @keyframes fadeOut {
@@ -103,52 +127,73 @@
             to { opacity: 0; visibility: hidden; }
         }
 
-        .loading-status {
-            margin-top: 10px;
-            font-size: 12px;
-            color: #ec4899;
-        }
-
-        .resume-container {
-            opacity: 0;
-            animation: fadeIn 1s ease-in-out 5s forwards;
-        }
-
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-
-        /* Rest of your existing styles... */
     </style>
 </head>
 <body>
     <!-- Loading Screen -->
     <div class="loading-screen">
         <div class="loading-container">
-            <div class="pixel-corner top-left"></div>
-            <div class="pixel-corner top-right"></div>
-            <div class="pixel-corner bottom-left"></div>
-            <div class="pixel-corner bottom-right"></div>
-            
             <div class="loading-title">LOADING RESUME</div>
-            
             <div class="loading-bar-container">
                 <div class="loading-bar"></div>
             </div>
-            
             <div class="loading-status" id="loadingStatus">INITIALIZING...</div>
             <div class="press-start">PRESS START TO CONTINUE</div>
         </div>
     </div>
 
-    <!-- Rest of your existing resume content... -->
+    <!-- Resume Content -->
     <div class="resume-container">
-        <!-- Your existing resume content here -->
+        <div class="resume-content">
+            <!-- Left Screen -->
+            <div class="screen">
+                <img src="YOUR_PROFILE_PIC_URL" alt="Profile" class="profile-pic">
+                <h1 style="color: #ec4899; font-size: 24px;">Your Name</h1>
+                <p style="color: #ec4899; font-size: 14px;">your/pronouns</p>
+
+                <div class="section-title">Education</div>
+                <div class="content-card">
+                    <h3 style="color: #ec4899;">Master of Science</h3>
+                    <p style="color: #f3f4f6;">University Name</p>
+                    <p style="color: #f3f4f6;">2022-2024</p>
+                </div>
+
+                <div class="section-title">Certifications</div>
+                <div class="content-card">
+                    <ul style="color: #f3f4f6; list-style: none; padding: 0;">
+                        <li>CompTIA A+</li>
+                        <li>CompTIA Security+</li>
+                        <li>Certified Ethical Hacker</li>
+                    </ul>
+                </div>
+
+                <div class="section-title">Skills</div>
+                <div class="content-card">
+                    <h3 style="color: #ec4899;">Cybersecurity</h3>
+                    <div>
+                        <span class="skill-tag">Penetration Testing</span>
+                        <span class="skill-tag">Network Security</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Screen -->
+            <div class="screen">
+                <div class="section-title">GitHub Projects</div>
+                <div class="content-card">
+                    <h3 style="color: #ec4899;">Project Name</h3>
+                    <p style="color: #f3f4f6;">Project description goes here...</p>
+                    <a href="#" style="color: #ec4899; text-decoration: underline;">View on GitHub</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
-        // Add loading status messages
         const statusMessages = [
             "INITIALIZING...",
             "LOADING SKILLS...",
