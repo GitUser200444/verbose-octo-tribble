@@ -1,82 +1,53 @@
 ---
 layout: home
 ---
+---
+layout: default
+title: GitHub Portfolio
+---
 
-Proficient in networking, security, and system administration, with hands-on experience in configuring and troubleshooting network infrastructures.
+<header>
+    <div class="profile">
+        <img src="profile.jpg" alt="Your Profile Picture">
+        <h1>Your Name</h1>
+        <p>@yourgithubhandle</p>
+        <p><span class="badge">Developer Program Member</span></p>
+        <p><span class="coder">&lt;/Coder&gt;</span></p>
+        <p>Location: Your City, Country</p>
+        <p>Email: your.email@example.com</p>
+        <p><a href="https://twitter.com/yourhandle" target="_blank">Twitter</a></p>
+        <p class="hire">Available for hire</p>
+    </div>
+</header>
 
-Strong understanding of databases, project management, web development, and human-computer interaction.
+<section class="projects">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+        <div class="project">
+            <h3><a href="#">Project 1</a></h3>
+            <p>Description of project 1.</p>
+        </div>
+        <div class="project">
+            <h3><a href="#">Project 2</a></h3>
+            <p>Description of project 2.</p>
+        </div>
+        <div class="project">
+            <h3><a href="#">Project 3</a></h3>
+            <p>Description of project 3.</p>
+        </div>
+    </div>
+</section>
 
-Experienced in the implementation and management of enterprise-level IT solutions, with exposure to database management and financial systems.
+<section class="interests">
+    <h2>My Interests</h2>
+    <div class="interest-grid">
+        <div class="interest">CSS</div>
+        <div class="interest">Web Design</div>
+        <div class="interest">Sass</div>
+    </div>
+</section>
 
-Skilled in using various IT tools and technologies, with a focus on building secure, scalable, and efficient network systems.
-
-
-## **Colorado State University Global**
-**Bachelors of Science**, *Information Technology (IT)*
-
-*Jun 2024 - Feb 2026*
-
-**Grade**: *3.70 Cumulative GPA
-
-✅ **Computing & Mathematics** – *Applying foundational knowledge to real-world IT solutions*.
-  	
-✅ **Problem-Solving** – *Analyzing issues, defining computing requirements, and developing effective solutions*.
-    		
-✅ **Systems & Software Development** – *Designing, implementing, and evaluating computer-based systems and applications*.
-    		
-✅ **Core IT Technologies** – *Gaining hands-on experience in human-computer interaction, information management, programming, networking, and web technologies*.
-
-✅ **User-Centered Solutions** – *Assessing user needs to develop, implement, and manage IT solutions effectively*.
-
-✅ **Cybersecurity & Cloud Computing** – *Specializing in cutting-edge fields such as cybersecurity, virtualization, cloud computing, and web application development*.
-
-## **Colorado State University Global**
-**Masters of Science**, *Artificial Intelligence (AI) & Machine Learning*
-
-*Feb 2026 - Dec 2026*
-
-**Grade**: *3.70 Cumulative GPA
-
-✅ **Master AI & Machine Learning** – *Study supervised, unsupervised, and reinforcement learning, neural networks, and deep learning*.
-
-✅ **Apply Advanced Mathematics & Statistics** – *Use linear algebra, probability, and statistical modeling to enhance AI algorithms*.
-    	
-✅ **Develop AI-Powered Solutions** – *Implement AI models for automation, predictive analytics, and human behavior modeling*.
-  	
-✅ **Explore NLP & Computer Vision** – *Work with image recognition, speech processing, and language modeling*.
-
-✅ **Enhance Programming Skills** – *Utilize Python, TensorFlow, and AI frameworks to build scalable AI applications*.
-  	
-This program is preparing me to drive AI innovation and intelligent automation in the tech industry.
-
-## **Certifications**
-
-*ArcX Cyber Threat Intelligence 101* ![CTI101](https://github.com/user-attachments/assets/ee9f333f-5e93-483e-a0bb-6d468a53971a)
-
-<a href="https://arcx.io/verify-certificate?id=f03f3241a006aadc4af7b8238c5b0e5ee2b18313&k=0bd39ef9273d414fb792e79bba2853e2">Verify</a>
-
-*Foundational training in Cyber Threat Intelligence (CTI) completed, covering threat actors, attack surfaces, the intelligence cycle, and legal/ethical considerations*.
-
-**Date Obtained**: 08/11/2024
-
-**Skills Learned**: Analysis, Identification, Mitigation, Investigation, Ethics
-
------------------------------------
-
-*CompTIA Cloud Essentials+ ![Cloud_Essentials__Certified_Logo_color_15MAY19](https://github.com/user-attachments/assets/78d4451b-8756-4efa-872d-ab3583eb3ec8)
-
-*Solid foundation in cloud computing principles, including business impact, risk management, and security. Hands-on knowledge in cloud concepts, architecture, security, compliance, and governance*.
-
-**Date Obtained**: 00/00/000
-
-**Skills Learned**: SaaS, IaaS, PaaS, BIA, Security & Compliance, Cloud Goverance
-
-------------------------------------
-
-*CompTIA A+ ![CompTIA_A_2Bce](https://github.com/user-attachments/assets/d2e92c21-68e3-4c11-b991-95ff1963d364)
-
-*This provided hands-on expertise in IT support, hardware, software, and troubleshooting. Key skills include hardware and software troubleshooting, operating systems and virtualization, networking and security, and cloud and IoT technologies*.
-
-**Date Obtained**: 00/00/0000
-
-**Skills Learned**: Troubleshooting, Configuration, Networking, Security, Maintenance, Optimization
+<section class="thoughts">
+    <h2>My Thoughts</h2>
+    <p><a href="#">Welcome to Jekyll!</a> - Jan 29, 2019</p>
+</section>
