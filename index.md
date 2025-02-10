@@ -54,3 +54,12 @@ title: GitHub Portfolio
     <h2>My Thoughts</h2>
     <p><a href="#">Welcome to Jekyll!</a> - Jan 29, 2019</p>
 </section>
+
+<section class="Certifications">
+    <h2>Certifications I’ve Acquired</h2>
+    <div class="certification-grid">
+    <div class="certification">PCEP: Entry Level Python Programmer</div>
+    <div class="certification">CompTIA: A+</div>
+    <div class="certification">CompTIA: Cloud Essentials+</div>
+          
+
