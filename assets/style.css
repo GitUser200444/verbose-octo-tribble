@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Fira Code', monospace;
     max-width: 800px;
     margin: auto;
     padding: 20px;
@@ -10,13 +10,13 @@ header {
 }
 
 .badge, .coder {
-    background: #ffcc00;
-    padding: 5px 10px;
-    border-radius: 5px;
+    background: #c8c8c8;
+    padding: 4px 10px;
+    border-radius: 10px;
 }
 
 .hire {
-    color: green;
+    color: black;
     font-weight: bold;
 }
 
@@ -33,5 +33,6 @@ header {
 .project, .interest {
     background: #f4f4f4;
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 10px;
 }
+
