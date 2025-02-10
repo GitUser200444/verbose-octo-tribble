@@ -8,14 +8,14 @@ title: GitHub Portfolio
 
 <header>
     <div class="profile">
-        <img src="profile.jpg" alt="Your Profile Picture">
-        <h1>Your Name</h1>
-        <p>@yourgithubhandle</p>
+        <img src="avatar.png" alt="Your Profile Picture">
+        <h1>Teymarr P. (He/Him)</h1>
+        <p>@gituser200444</p>
         <p><span class="badge">Developer Program Member</span></p>
-        <p><span class="coder">&lt;/Coder&gt;</span></p>
-        <p>Location: Your City, Country</p>
-        <p>Email: your.email@example.com</p>
-        <p><a href="https://twitter.com/yourhandle" target="_blank">Twitter</a></p>
+        <p>Location: Greater Pittsburgh Region, United States</p>
+        <p>Email: teymarrpage@tuta.io</p>
+        <p><a href="https://www.linkedin.com/in/teymarrpage/" target="_blank">LinkedIn</a></p>
+        <p><a href="https://github.com/GitUser200444" target="_blank">GitHub</a></p>
         <p class="hire">Available for hire</p>
     </div>
 </header>
@@ -44,6 +44,7 @@ title: GitHub Portfolio
         <div class="interest">CSS</div>
         <div class="interest">Web Design</div>
         <div class="interest">Sass</div>
+        <div class="interest">Python</div>
     </div>
 </section>
 
