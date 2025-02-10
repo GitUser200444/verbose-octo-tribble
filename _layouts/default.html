@@ -1,62 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Gaming Resume</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #111827;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #ec4899;
+            font-family: 'Press Start 2P', cursive;
+            z-index: 1000;
+            animation: fadeOut 0.5s ease-in-out 5s forwards;
+        }
+
+        .loading-text {
+            margin-top: 20px;
+            animation: blink 1s infinite;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #ec4899;
+            border-top: 5px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; visibility: hidden; }
+        }
+
+        .resume-container {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out 5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Add your custom styles here */
+    </style>
 </head>
-<body>
-  <header>
-    <h1>{{ site.title }}</h1>
-    <p>{{ site.description }}</p>
-  </header>
-  
-  <main>
-    <section id="contact-info">
-      <h2>Contact Information</h2>
-      <p>Name: Your Name</p>
-      <p>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-    </section>
+<body class="bg-gray-900">
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="spinner"></div>
+        <div class="loading-text">LOADING...</div>
+        <div class="mt-4 text-sm">Press START to continue</div>
+    </div>
 
-    <section id="education">
-      <h2>Education</h2>
-      <p>Bachelor's Degree in [Your Field]</p>
-      <p>Master's Degree in [Your Field]</p>
-    </section>
+    <!-- Resume Content -->
+    <div class="resume-container">
+        <div class="flex h-screen p-4 gap-4">
+            <!-- Left Screen -->
+            <div class="w-1/2 bg-gray-800 rounded-lg p-4 border-2 border-pink-400 overflow-y-auto">
+                <!-- Profile Section -->
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-24 h-24 bg-gray-700 rounded-full border-2 border-pink-400">
+                        <!-- Replace src with your profile picture -->
+                        <img src="/api/placeholder/96/96" alt="Profile" class="rounded-full">
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-pink-400">Your Name</h1>
+                        <p class="text-sm text-pink-300">your/pronouns</p>
+                    </div>
+                </div>
 
-    <section id="github-posts">
-      <h2>GitHub Posts</h2>
-      <ul>
-        {% for post in site.posts %}
-          <li>
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-            <small>{{ post.date | date: "%b %-d, %Y" }}</small>
-          </li>
-        {% endfor %}
-      </ul>
-    </section>
+                <!-- Education Section -->
+                <div class="mb-6">
+                    <h2 class="text-lg font-bold mb-3 text-pink-400">Education</h2>
+                    <div class="bg-gray-700 p-3 rounded mb-3">
+                        <h3 class="font-bold text-pink-400">Master of Science</h3>
+                        <p class="text-sm text-pink-300">University Name</p>
+                        <p class="text-sm text-pink-300">2022-2024</p>
+                    </div>
+                    <div class="bg-gray-700 p-3 rounded">
+                        <h3 class="font-bold text-pink-400">Bachelor of Science</h3>
+                        <p class="text-sm text-pink-300">University Name</p>
+                        <p class="text-sm text-pink-300">2018-2022</p>
+                    </div>
+                </div>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Cybersecurity Skills</li>
-        <li>Coding Languages: [Your Languages]</li>
-      </ul>
-    </section>
+                <!-- Certifications Section -->
+                <div class="mb-6">
+                    <h2 class="text-lg font-bold mb-3 text-pink-400">Certifications</h2>
+                    <div class="bg-gray-700 p-3 rounded">
+                        <ul class="text-pink-300">
+                            <li class="mb-2">CompTIA A+</li>
+                            <li class="mb-2">CompTIA Security+</li>
+                            <li>Other certifications...</li>
+                        </ul>
+                    </div>
+                </div>
 
-    <section id="certifications">
-      <h2>Certifications</h2>
-      <ul>
-        <li>CompTIA A+</li>
-        <li>Cloud Essentials+</li>
-        <li>ArcX Foundational Threat Intelligence</li>
-      </ul>
-    </section>
-  </main>
+                <!-- Skills Section -->
+                <div class="mb-6">
+                    <h2 class="text-lg font-bold mb-3 text-pink-400">Skills</h2>
+                    <div class="bg-gray-700 p-3 rounded mb-3">
+                        <h3 class="font-bold text-pink-400 mb-2">Cybersecurity Skills</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-600 px-2 py-1 rounded text-sm text-pink-300">Penetration Testing</span>
+                            <span class="bg-gray-600 px-2 py-1 rounded text-sm text-pink-300">Network Security</span>
+                        </div>
+                    </div>
+                    <!-- Add more skill sections as needed -->
+                </div>
+            </div>
 
-  <footer>
-    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
-  </footer>
+            <!-- Right Screen -->
+            <div class="w-1/2 bg-gray-800 rounded-lg p-4 border-2 border-pink-400 overflow-y-auto">
+                <h2 class="text-lg font-bold mb-4 text-pink-400">GitHub Projects</h2>
+                <!-- Project cards -->
+                <div class="grid gap-4">
+                    <div class="bg-gray-700 p-4 rounded cursor-pointer hover:bg-gray-600">
+                        <h3 class="font-bold text-pink-400">Project 1</h3>
+                        <p class="text-sm text-pink-300">Project description...</p>
+                    </div>
+                    <!-- Add more project cards as needed -->
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
