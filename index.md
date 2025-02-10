@@ -61,5 +61,6 @@ title: GitHub Portfolio
     <div class="certification">PCEP: Entry Level Python Programmer</div>
     <div class="certification">CompTIA: A+</div>
     <div class="certification">CompTIA: Cloud Essentials+</div>
+    <div class="certification">ArcX: Cyber Threat Practicioner</div>
           
 
