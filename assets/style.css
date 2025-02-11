@@ -40,4 +40,61 @@ header {
 body {
   cursor: url('https://github.com/GitUser200444/verbose-octo-tribble/raw/main/icons8-cursor-32.png') 16 16, auto;
 }
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #333; /* Dark background color */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullets */
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block; /* Make list items inline */
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* White text color */
+    font-size: 18px;
+    padding: 10px 20px;
+    display: inline-block; /* Makes padding work */
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Change background color on hover */
+    border-radius: 5px; /* Rounded corners for hover */
+}
+
+/* Content Section Styling */
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 8px;
+}
+
+/* Scroll to top when clicking the nav items (Smooth scroll) */
+html {
+    scroll-behavior: smooth;
+}
+
 
