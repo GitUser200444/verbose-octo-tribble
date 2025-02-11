@@ -47,22 +47,30 @@ body {
     box-sizing: border-box;
 }
 
-/* Body styling */
+/* Body Styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    margin-top: 50px; /* To prevent the content from hiding behind the fixed nav */
 }
 
-/* Navigation Bar Styling */
+/* Fixed Navigation Bar Styling */
 nav {
     background-color: #333; /* Dark background color */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     padding: 10px 0;
+    z-index: 1000; /* Ensures the nav stays on top */
 }
 
 nav ul {
     list-style-type: none; /* Remove bullets */
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -84,7 +92,7 @@ nav ul li a:hover {
     border-radius: 5px; /* Rounded corners for hover */
 }
 
-/* Content Section Styling */
+/* Add Padding to Content Sections to Prevent Overlap */
 section {
     padding: 20px;
     margin: 20px 0;
@@ -96,5 +104,3 @@ section {
 html {
     scroll-behavior: smooth;
 }
-
-
